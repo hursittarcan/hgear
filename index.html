@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HGear – Vastgoed & Verhuur</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f7f7f5;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e5e5e0;
+      max-width: 520px;
+      width: 100%;
+      padding: 2.5rem 2rem;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 2rem;
+    }
+
+    .logo-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: #0d3d5c;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+    }
+
+    .company-name {
+      font-size: 22px;
+      font-weight: 600;
+      color: #0d3d5c;
+      line-height: 1.2;
+    }
+
+    .company-type {
+      font-size: 13px;
+      color: #777;
+      margin-top: 2px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #ebebea;
+      margin: 1.5rem 0;
+    }
+
+    .info-grid {
+      display: grid;
+      gap: 0;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0ee;
+      font-size: 14px;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-label {
+      color: #888;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .info-value {
+      color: #1a1a1a;
+      text-align: right;
+      font-weight: 500;
+    }
+
+    .activity-section {
+      margin-top: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    .activity-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .activity-list li {
+      font-size: 13px;
+      color: #444;
+      padding-left: 1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .activity-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #ccc;
+    }
+
+    .cta-section {
+      margin-top: 2rem;
+      background: #f0f5fa;
+      border-radius: 10px;
+      padding: 1.25rem 1.25rem;
+      text-align: center;
+    }
+
+    .cta-section p {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #0d3d5c;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px 22px;
+      border-radius: 8px;
+      transition: background 0.15s;
+    }
+
+    .cta-button:hover {
+      background: #0a2e45;
+    }
+
+    footer {
+      margin-top: 1.5rem;
+      font-size: 12px;
+      color: #bbb;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <div class="logo-row">
+      <div class="logo-circle">HG</div>
+      <div>
+        <div class="company-name">HGear</div>
+        <div class="company-type">Besloten Vennootschap</div>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-row">
+        <span class="info-label">BTW-nummer</span>
+        <span class="info-value">BE0794.253.420</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Ondernemingsnummer</span>
+        <span class="info-value">BE0794253420</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Adres</span>
+        <span class="info-value">Kolmenstraat 78, 3512 Hasselt, België</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Oprichtingsdatum</span>
+        <span class="info-value">30 november 2022</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Website</span>
+        <span class="info-value">
+          <a href="https://www.binoview.com/" style="color:#0d3d5c;">www.binoview.com</a>
+        </span>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="activity-section">
+      <div class="section-title">Hoofdactiviteiten</div>
+      <ul class="activity-list">
+        <li>Bemiddeling in verband met exploitatie van en handel in onroerend goed</li>
+        <li>Bemiddeling bij de aankoop, verkoop en verhuur van onroerend goed voor een vast bedrag of op contractbasis</li>
+      </ul>
+    </div>
+
+    <div class="cta-section">
+      <p>Voor commerciële informatie en projecten, bezoek onze website:</p>
+      <a class="cta-button" href="https://www.binoview.com/" target="_blank" rel="noopener">Bezoek binoview.com</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2024 HGear BV &nbsp;·&nbsp; Hasselt, België
+  </footer>
+
+</body>
+</html>
